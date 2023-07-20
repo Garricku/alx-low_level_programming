@@ -13,7 +13,7 @@
 void print_line(int n)
 {
 	int i;
-	char c;
+	char c = '_';
 
 	if (n <= 0)
 	{
