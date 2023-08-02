@@ -1,22 +1,39 @@
 #include "main.h"
 
 /**
- * is_palindrome -  Returns 1 if a string is a palindrome and 0 if not.
- * @s: String to be checked for palindrome.
- * Return: (Success) 1 if palindrone else 0.
+ * is_palindrome - returns 1 if a string is a palindrome and 0 if not.
+ * @s: the string to check.
+ * Return: 1 if s is a palindrome, 0 otherwise.
  */
 
 int is_palindrome(char *s)
 {
-	int start, end;
+	int len = _strlen(s);
 
-	if (start >= end)
+	if (len <= 1)
 	{
 		return (1);
 	}
-	if (s[start] != s[end])
+	return (pal_helper(s, len, 0));
+}
+
+/**
+ * pal_helper - checks if a string is a palindrome.
+ * @s: the string to check.
+ * @len: the length of the string.
+ * @i: the current index to check.
+ * Return: 1 if s is a palindrome, 0 otherwise.
+ */
+
+int pal_helper(char *s, int len, int i)
+{
+	if (i >= len / 2)
+	{
+		return (1);
+	}
+	if (s[i] != s[len - i - 1])
 	{
 		return (0);
 	}
-		return (is_palindrome(s, start + 1, end - 1));
+	return (pal_helper(s, len, i + 1));
 }
