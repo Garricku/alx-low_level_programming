@@ -15,9 +15,10 @@ int is_palindrome(char *s)
         return (_strlen_recursion(s + 1) + 1);
 }
 
-int main(void)
+int main()
 {
 	int len = _strlen_recursion(s);
+	*s = &s;
 
 	if (len <= 1)
 	{
