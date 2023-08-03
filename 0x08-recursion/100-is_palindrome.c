@@ -8,29 +8,17 @@
 
 int is_palindrome(char *s)
 {
-	*ps = @s;
+	int len = _strlen_recursion(s);
 
-	if (s == '\0')
+	if (len <= 1)
 	{
-		s = string;
-		break;
+		return 1;
 	}
-	else
+	if (s[0] != s[len - 1])
 	{
-		s++;
+		return 0;
 	}
-	s--;
-	if (s < *ps)
-	{
-		s = revString;
-		break;
-	}
-	if (revString == string)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	s[len - 1] = '\0';
+
+	return (is_palindrome(s + 1));
 }
