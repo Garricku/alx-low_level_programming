@@ -2,6 +2,8 @@
 
 /**
  * main - Entry point.
+ * @argc: count.
+ * @argv: index array.
  * Return: (Success)
  */
 
