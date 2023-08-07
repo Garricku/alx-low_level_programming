@@ -33,19 +33,19 @@ char *str_concat(char *s1, char *s2)
 	{
 		len2++;
 	}
-	p = malloc(sizeof(char) * (len1 + len2 + 1));
-	if (p == NULL)
+	s = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (s == NULL)
 	{
 		return (NULL);
 	}
 	for (i = 0; i < len1; i++)
 	{
-		p[i] = s1[i];
+		s[i] = s1[i];
 	}
 	for (j = 0; j < len2; j++)
 	{
-		p[i + j] = s2[j];
+		s[i + j] = s2[j];
 	}
-	p[i + j] = '\0';
-	return (p);
+	s[i + j] = '\0';
+	return (s);
 }
