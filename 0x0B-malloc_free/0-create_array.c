@@ -11,8 +11,9 @@
 char *create_array(unsigned int size, char c)
 {
 	char *p;
-
-	char array[size] = {c};
+	c = 0x48;
+	char a[size] = {c};
+	*p = &a; 
 
 	if (size == 0)
 	{
