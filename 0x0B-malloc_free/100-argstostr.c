@@ -38,8 +38,9 @@ char *argstostr(int ac, char **av)
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
 			p[k++] = av[i][j];
-			_putchar('\n');
 		}
+		_putchar('\n');
+		
 	}
 	p[k] = '\0';
 	return (p);
