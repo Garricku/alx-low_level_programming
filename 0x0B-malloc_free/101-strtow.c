@@ -21,18 +21,17 @@ char **strtow(char *str)
 	}
 	for (i = 0; i != '\0'; i++)
 	{
-		if (words[i] == " " || i == '\t')
+		if (words[i] == ' ' || i == '\t')
 		{
 			words[i] = '\n';
 		}
 	}
-
 	len = i + 1;
-	words = malloc(sizeof(char) * len);
 	if (words == NULL)
 	{
 		free(words); 
 		return (NULL);
 	}
+	words = malloc(sizeof(char) * len);
 	return (words);
 }
