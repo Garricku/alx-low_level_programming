@@ -18,8 +18,9 @@ char **strtow(char *str)
 	char *delim = "\t\n";
 	char **array;
 	int len;
+	char empty = "";
 
-	if (str == NULL || *str == "")
+	if (str == NULL || str == empty)
 	{
 		return (NULL);
 	}
