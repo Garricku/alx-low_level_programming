@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 	len = 0;
 	k = 0;
 
-	if (ac == 0 || av == 0)
+	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
 	}
@@ -37,8 +37,10 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			p[k++] = av[i][j];
-			p[k++] = '\n';
+			p[k] = av[i][j];
+			k++;
+			p[k] = '\n';
+			k++;
 		}
 	}
 	p[k] = '\0';
