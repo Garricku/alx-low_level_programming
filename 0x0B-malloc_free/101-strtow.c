@@ -19,7 +19,7 @@ char **strtow(char *str)
 	char **array;
 	int len;
 
-	if (str == NULL || str == "")
+	if (str == NULL || *str == "")
 	{
 		return (NULL);
 	}
