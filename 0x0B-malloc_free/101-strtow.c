@@ -18,7 +18,7 @@ char **strtow(char *str)
 	char s[];
 	int count2;
 
-	if ( str == NULL || str == "")
+	if (str == NULL || (strcmp(str, "") == 0)
 	{
 		return (NULL);
 	}
@@ -26,13 +26,14 @@ char **strtow(char *str)
 	count = 0;
 	i = 0;
 
-	for (i = 0; i != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == '\040' || '\t')
+		if (str[i] = ' ' || '\t')
 		{
 			string[count] = i;
-			count =+ 1;
+			count += 1;
 		}
+	}
 	while (count2 <= count)
 	{
 	len = s1 + 1;
