@@ -13,45 +13,39 @@ char **strtow(char *str)
 {
 	int i;
 	int count;
-	char *words;
-	char *token;
-	char *delim = "\t\n";
-	char **array;
 	int len;
+	char string;
+	char s[];
+	int count2;
 
-	if (str == NULL || str == 0)
+	if ( str == NULL || str == "")
 	{
 		return (NULL);
 	}
-	words = str;
+
 	count = 0;
-	token = strtok(words, delim);
-	while (token != NULL)
+	i = 0;
+
+	for (i = 0; i != '\0'; i++)
 	{
-		count++;
-		token = strtok(NULL, delim);
+		if (str[i] == '\040' || '\t')
+		{
+			string[count] = i;
+			count =+ 1;
+		}
+	while (count2 <= count)
+	{
+	len = s1 + 1;
+	count2 = (count - count) + 1;
+	string[count] = malloc(sizeof(char *) * len);
+	string[count] = s[0];
+	count++;
+	s++
 	}
-	array = malloc(sizeof(char *) * (count + 1));
-	if (array == NULL)
+	if (string == NULL)
 	{
-		free(array);
+		free(string);
 		return (NULL);
 	}
-	token = strtok(words, delim);
-	i = 0;
-	while (token != NULL)
-	{
-		len = strlen(token);
-		array[i] = malloc(sizeof(char) * (len + 1));
-		if (array[i] == NULL)
-		{
-			free(array[i]);
-			return (NULL);
-		}
-	strcpy(array[i], token);
-	token = strtok(NULL, delim);
-	i++;
-	}
-	array[i] = NULL;
-	return (array);
+	return (string);
 }
