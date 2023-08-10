@@ -7,7 +7,6 @@
  * @s1: String number 1.
  * @s2: String number 2.
  * @n: Amount of bytes from s2 to be concatenated to s1.
- * if n is > or = to s2 use the entire string of s2. NULL = "".
  * Return: Pointer to concatenated string or NULL if fails.
  */
 
@@ -23,7 +22,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s1 = "";
 	}
-
 	if (s2 == NULL)
 	{
 		s2 = "";
@@ -36,9 +34,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		n = len2;
 	}
-
 	s = malloc(sizeof(char) * (len1 + n + 1));
-
 	if (s == NULL)
 	{
 		free(s);
@@ -52,8 +48,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s[i + j] = s2[j];
 	}
-
 	s[i + j] = '\0';
-
 	return (s);
 }
