@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	num1 = argv[1][0] - '0';
-	num2 = argv[2][0] - '0';
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
 
 	if (num1 <= 0 || num2 <= 0)
 	{
