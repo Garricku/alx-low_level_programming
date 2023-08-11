@@ -4,6 +4,8 @@
 
 /**
  * main - Entry Point.
+ * @argc: Argument count.
+ * @argv: Argument 1 and 2.
  * Return: Always 0 (Success).
  */
 
