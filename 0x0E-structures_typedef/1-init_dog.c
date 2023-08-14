@@ -1,12 +1,5 @@
 #include <stdio.h>
-
-/**
- * struct dog - Info on dog.
- * @name: Name of the dog.
- * @age: age of the dog.
- * @owner: Ownwer of dog
- * Discription: All details about dog is stored here.
- */
+#include "main.h"
 
 struct dog
 {
