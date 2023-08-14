@@ -3,5 +3,6 @@
 
 int main()
 {
-	printf("%s\n", PROGRAM_NAME)
+	printf("%s\n", PROGRAM_NAME);
+	return (0);
 }
