@@ -1,5 +1,7 @@
 #include <stdio.h>
+#ifndef PROGRAM_NAME
 #define PROGRAM_NAME __FILE__
+#endif
 
 /**
  * main - Entry point.
