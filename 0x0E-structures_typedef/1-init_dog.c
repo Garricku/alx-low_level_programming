@@ -1,4 +1,19 @@
-#include "dog.h"
+#include <stdio.h>
+
+/**
+ * struct dog - Info on dog.
+ * @name: Name of the dog.
+ * @age: age of the dog.
+ * @owner: Ownwer of dog
+ * Discription: All details about dog is stored here.
+ */
+
+struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+};
 
 /**
  * init_dog - Intitializes a varible of type struct dog.
