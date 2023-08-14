@@ -1,4 +1,5 @@
-#include <stdio.h>
+#ifndef HEADER_FILE
+#define HEADER_FILE
 
 /**
  * struct dog - Info on a dog.
@@ -7,9 +8,11 @@
  * @owner: Dog's owner.
  */
 
-struct dog
+#define typedef struct dog 
 {
 	char *name;
 	float age;
 	char *owner;
-}
+}dog;
+
+#endif
