@@ -1,7 +1,5 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
-#ifndef DOG
-#define DOG
+#ifndef DOG_H
+#define DOG_H
 
 /**
  * struct dog - Info on a dog.
@@ -10,11 +8,11 @@
  * @owner: Dog's owner.
  */
 
-#define typedef struct dog dog
+struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-}
+};
 
 #endif
