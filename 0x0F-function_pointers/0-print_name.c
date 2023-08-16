@@ -7,10 +7,8 @@
  * Return: Void.
  */
 
-void print_name(char *name, void (*f)(char *));
+void print_name(char *name, void (*f)(char *))
 {
-	int i;
-
 	if (name == NULL || f == NULL)
 	{
 		return;
