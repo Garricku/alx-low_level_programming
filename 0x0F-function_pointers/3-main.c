@@ -5,6 +5,8 @@
 
 /**
  * main - Entry point.
+ * @argc: Argument count.
+ * @argv: Arguments to be used for calc.
  * Return: 0 (Success)
  */
 
