@@ -23,13 +23,14 @@ int (*get_op_func(char *s))(int, int)
 		};
 
 	i = 0;
-	while (i < '\0')
+
+	while (ops[i].op != NULL)
 	{
-		if (s == op[i])
+		if (*ops[i].op == *s && *(s + 1) == '\0')
 		{
-			return (ops[i]);
+			return (ops[i].f);
 		}
-	i++;
+		i++;
 	}
 	printf("Error\n");
 	exit(99);

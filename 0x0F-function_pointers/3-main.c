@@ -10,18 +10,20 @@
 
 int main(int argc, char **argv)
 {
-	int arg1[1];
-	int arg2[2];
+	int arg1;
+	int arg2;
+	int result;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	arg[1] = atoi(argv[1]);
-	arg[2] = atoi(argv[3]);
+	arg1 = atoi(argv[1]);
+	arg2 = atoi(argv[3]);
 
-	get_op_func(arg[1], arg[2]);
+	result = get_op_func(argv[2])(arg1, arg2);
+	printf("%d\n", result);
 
 	return (0);
 }
