@@ -12,15 +12,8 @@
 void print_all(const char * const format, ...)
 {
 	char *ptr;
+
 	ptr = &*
 	printf("%c\n", ptr)
 
 }
-
-#typedef struct forma;
-{
-        char c;
-        int i;
-        float f;
-        char s;
-} format;
