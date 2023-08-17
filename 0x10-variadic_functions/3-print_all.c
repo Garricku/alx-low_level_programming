@@ -15,20 +15,19 @@ void print_all(const char * const format, ...)
 	int i;
 	char *ptr;
 
-	ptr = &*format;
-	if (*ptr == NULL)
+	ptr = "*";
+	if (ptr == NULL)
 	{
 		return;
 	}
 
 	i = 0;
-	while (format[i] != NULL)
+	while (format[i] != format[i + 4])
 	{
 		while (format[i] == '%')
 		{
 			i++;
 		}
-		format[i++];
 	}
 	printf("\n");
 }
