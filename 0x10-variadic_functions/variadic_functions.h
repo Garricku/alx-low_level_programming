@@ -7,7 +7,6 @@ typedef struct forma
         int i;
         float f;
         char s;
-	NULL NULL;
 } format;
 
 /*FUNCTION PROTOTYPES*/
