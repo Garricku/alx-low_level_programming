@@ -79,6 +79,12 @@ int op_mod(int a, int b)
 {
 	int calc;
 
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
 	calc = (a) % (b);
 	return (calc);
 }
