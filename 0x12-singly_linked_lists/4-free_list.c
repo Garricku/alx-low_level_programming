@@ -3,6 +3,8 @@
 /**
  * free_list - Frees a list_t list.
  * @head: The head of the list to be freed.
+ *
+ * Return: 0 (Success).
  */
 
 void free_list(list_t *head)
