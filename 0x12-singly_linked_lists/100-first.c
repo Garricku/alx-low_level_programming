@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * tort_hare - Prints the tortoise's comments before main/hare.
- * @:
+ * before_main - Prints the tortoise's comments before main/hare.
+ * Executed before main.
  *
  * Return: Void.
  */
