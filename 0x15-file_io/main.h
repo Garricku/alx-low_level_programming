@@ -9,7 +9,7 @@
 	#include <stdlib.h>
 	#include <string.h>
 	#include <fcntl.h>
-	
+
 /*PROTOTYPES*/
 
 	ssize_t read_textfile(const char *filename, size_t letters);
