@@ -20,7 +20,6 @@ int create_file(const char *filename, char *text_content)
 	file = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (file == -1)
 	{
-		write(STDERR_FILENO, "Error: Failed to create file.\n", 30);
 		return (-1);
 	}
 
@@ -35,7 +34,6 @@ int create_file(const char *filename, char *text_content)
 		writeBytes = write(file, text_content, numOfChars);
 		if (writeBytes == -1 || writeBytes != numOfChars)
 		{
-			write(STDERR_FILENO, "Error: Failed to write.\n", 24);
 			close(file);
 			return (-1);
 		}
