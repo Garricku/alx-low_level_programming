@@ -64,19 +64,17 @@ int check_elf(int fd, unsigned char *buffer)
  */
 void print_elf_header(unsigned char *buffer)
 {
+	int i;
+
 	Elf64_Ehdr *header;
-
 	header = (Elf64_Ehdr *)buffer;
-
-	/* Print magic number */
 	printf("Magic:   ");
-	for (int i = 0; i < EI_NIDENT; i++)
+
+	for (i = 0; i < EI_NIDENT; i++)
 	{
 		printf("%02x ", header->e_ident[i]);
 	}
 	printf("\n");
-
-	/* Print class */
 	printf("Class:                             ");
 	switch (header->e_ident[EI_CLASS])
 	{
@@ -93,8 +91,6 @@ void print_elf_header(unsigned char *buffer)
 			printf("<unknown: %x>\n", header->e_ident[EI_CLASS]);
 			break;
 	}
-
-	/* Print data */
 	printf("Data:                              ");
 	switch (header->e_ident[EI_DATA])
 	{
@@ -111,5 +107,4 @@ void print_elf_header(unsigned char *buffer)
 			printf("<unknown: %x>\n", header->e_ident[EI_CLASS]);
 			break;
 	}
-	return (0);
 }
