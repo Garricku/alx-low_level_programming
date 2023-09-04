@@ -1,4 +1,5 @@
 #include "main.h"
+#include <elf.h>
 
 /**
  * check_file - Checks if the file name is valid and can be opened.
