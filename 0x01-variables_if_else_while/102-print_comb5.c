@@ -6,11 +6,11 @@
  */
 int main(void)
 {
-	int i = '0', j = '0', k = '0', l = '0', flag = 0;
+	int i = 0, j = 0, k = 0, l = 0, flag = 0;
 
-	while (i <= '9')
+	while (i <= 9)
 	{
-		if ((i < j && i < k && i < l) || (i == k && j < l))
+		if (((i * 10) + j) < ((k * 10) + l))
 		{
 			if (flag == 1)
 			{
@@ -18,27 +18,27 @@ int main(void)
 				putchar(' ');
 				flag = 0;
 			}
-			putchar(i);
-			putchar(j);
+			putchar(i + '0');
+			putchar(j + '0');
 			putchar(' ');
-			putchar(k);
-			putchar(l);
+			putchar(k + '0');
+			putchar(l + '0');
 			flag = 1;
 		}
-		if (j == '9' && k == '9' && l == '9')
+		if (j == 9 && k == 9 && l == 9)
 		{
-			i++;
-			j = '0', k = '0', l = '0';
+			i += 1, j = 0, k = 0, l = 0;
+			continue;
 		}
-		else if (k == '9' && l == '9')
+		if (k == 9 && l == 9)
 		{
-			j++;
-			l = '0', k = '0';
+			j += 1, l = 0, k = 0;
+			continue;
 		}
-		else if (l == '9')
+		else if (l == 9)
 		{
-			k++;
-			l = '0';
+			k += 1, l = 0;
+			continue;
 		}
 		l++;
 	}
