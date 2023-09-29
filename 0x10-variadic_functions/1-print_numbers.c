@@ -50,8 +50,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		delim = "";
 
 	if (n < 1)
+	{
+		printf("\n");
 		return;
-
+	}
 	va_start(args, n);
 	while (i < n)
 	{
@@ -65,4 +67,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	}
 	printf("\n");
 	va_end(args);
+	free(delim);
 }
