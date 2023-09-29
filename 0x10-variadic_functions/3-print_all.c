@@ -3,77 +3,68 @@
 #include <stdio.h>
 
 /**
- * _strlen - Counts length of a string.
- * @str: The string to be counted.
- * Return: Length.
- */
+* _strlen - Counts length of a string.
+* @str: The string to be counted.
+* Return: Length.
+*/
 int _strlen(const char *str)
 {
 	int i = 0;
 
 	while (str[i] != '\0')
-		i++;
+	i++;
 
 	return (i);
 }
 /**
- * print_all - Prints anything.
- * @*: Any charater.
- * @format: The format argument.
- * @...: Addtional arguments.
- * Return: Void.
- */
+* print_all - Prints anything.
+* @*: Any charater.
+* @format: The format argument.
+* @...: Addtional arguments.
+* Return: Void.
+*/
 
 void print_all(const char * const format, ...)
 {
-	const char *ptr = format;
-	int i = 0, len = 0, flag = 0;
 	va_list args;
+	int flag = 0;
+	const char *ptr = format;
+	char *separator = "";
 
-	if (ptr == NULL)
-		return;
-
-	len = _strlen(ptr);
 	va_start(args, format);
-	while (i < len)
+	while (ptr && *ptr)
 	{
-		if (i > 0)
+		if (flag == 1)
+			separator = ", ";
+
+		switch (*ptr)
 		{
-			if (flag == 1)
+			case 'c':
+				printf("%s%c", separator, va_arg(args, int));
+				break;
+			case 'i':
+				printf("%s%d", separator, va_arg(args, int));
+				break;
+			case 'f':
+				printf("%s%f", separator, va_arg(args, double));
+				break;
+			case 's':
 			{
-				printf(", ");
-				flag = 0;
+				char *str = va_arg(args, char *);
+
+				if (str == NULL)
+					str = "(nil)";
+
+				printf("%s%s", separator, str);
 			}
-		}
-		if (ptr[i] == 'c')
-		{
-			printf("%c", va_arg(args, int));
+			break;
+			default:
+			ptr++;
 			flag = 1;
-			i++;
 			continue;
 		}
-		else if (ptr[i] == 'i')
-		{
-			printf("%d", va_arg(args, int));
-			flag = 1;
-			i++;
-			continue;
-		}
-		else if (ptr[i] == 's')
-		{
-			printf("%s", va_arg(args, char *));
-			flag = 1;
-			i++;
-			continue;
-		}
-		else if (ptr[i] == 'f')
-		{
-			printf("%f", va_arg(args, double));
-			flag = 1;
-			i++;
-			continue;
-		}
-		i++;
+		ptr++;
+		flag = 1;
 	}
 	printf("\n");
 	va_end(args);
