@@ -23,5 +23,5 @@ typedef struct forma
 	void print_strings(const char *separator, const unsigned int n, ...);
 	void print_all(const char * const format, ...);
 	int _putchar(char c);
-
+	char *_strcpy(const char *src, char *dest);
 #endif
