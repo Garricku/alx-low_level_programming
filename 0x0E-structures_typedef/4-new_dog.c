@@ -56,7 +56,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	strcpy(dogsowner, owner);
 	init_dog(newDog, dogsname, age, dogsowner);
-
+	if (newDog == NULL)
+	{
+		free(newDog);
+		free(dogsname);
+		free(dogsowner);
+		return (NULL);
+	}
 	return (newDog);
 }
 /**
