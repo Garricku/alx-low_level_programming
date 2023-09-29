@@ -55,13 +55,13 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(args, n);
 	while (i < n)
 	{
-		printf("%d%s", va_arg(args, int), delim);
-		i++;
 		if (i == (n - 1))
 		{
 			printf("%d", va_arg(args, int));
 			break;
 		}
+		printf("%d%s", va_arg(args, int), delim);
+		i++;
 	}
 	printf("\n");
 	va_end(args);
