@@ -17,6 +17,8 @@ struct dog
 
 typedef struct dog dog_t;
 
+	char *strcpy(char *copy, const char *original);
+	unsigned long int strlen(const char *string);
 	void init_dog(struct dog *d, char *name, float age, char *owner);
 	void print_dog(struct dog *d);
 	dog_t *new_dog(char *name, float age, char *owner);
