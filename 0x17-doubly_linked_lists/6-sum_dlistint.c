@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * sus_dlistint - Returns the sum of all the data (n) of a dlistint_t list.
+ * sum_dlistint - Returns the sum of all the data (n) of a dlistint_t list.
  * @head: The head node.
  * Return: The sum of n.
  */

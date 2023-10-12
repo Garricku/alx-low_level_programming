@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_dlistint_t - Frees a dlistint list.
+ * free_dlistint - Frees a dlistint list.
  * @head: The head node.
  * Return: Void/nothing.
  */
