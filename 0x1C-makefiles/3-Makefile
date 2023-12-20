@@ -1,0 +1,26 @@
+CC = gcc
+SRC = *.c
+OBJ = *.o
+NAME = school
+RM = rm
+
+all: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
+
+clean:
+	${RM} -f *~ ${NAME}
+
+oclean:
+	${RM} -f ${OBJ}
+
+fclean:
+	${RM} -f *~ school
+	${RM} -f ${OBJ}
+
+re:
+	${RM} -f ${OBJ}
+	${CC} -c main.c -o main.o
+	${CC} -c school.c -o school.o
+	${CC} ${SRC} -o ${NAME}
+
+.PHONY: all clean oclean fclean re
