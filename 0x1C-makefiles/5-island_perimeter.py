@@ -40,7 +40,7 @@ def island_perimeter(grid=[0]):
 
     for i in range(rows):
         for j in range(cols):
-            if i > 99 or j > 99:
+            if i > 100 or j > 100:
                 print("height and width can't be greater than 100")
                 return perimeter
             if grid[i][j] == 1:
