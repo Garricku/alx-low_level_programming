@@ -7,7 +7,7 @@ RM = rm
 all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
-${OBJ}: %.c: %.o
+${OBJ}: %.o: %.c
 	${CC} -c $< -o $@
 
 clean:
