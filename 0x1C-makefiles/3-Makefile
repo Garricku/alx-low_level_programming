@@ -7,6 +7,9 @@ RM = rm
 all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
+${OBJ}: %.c: %.o
+	${CC} $< -o $@
+
 clean:
 	${RM} -f *~ ${NAME}
 
@@ -17,10 +20,6 @@ fclean:
 	${RM} -f *~ school
 	${RM} -f ${OBJ}
 
-re:
-	${RM} -f ${OBJ}
-	${CC} -c main.c -o main.o
-	${CC} -c school.c -o school.o
-	${CC} ${SRC} -o ${NAME}
+re: fclean all
 
 .PHONY: all clean oclean fclean re
