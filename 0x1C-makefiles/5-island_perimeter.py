@@ -40,6 +40,9 @@ def island_perimeter(grid=[0]):
 
     for i in range(rows):
         for j in range(cols):
+            if i > 99 or j > 99:
+                print("height and width can't be greater than 100")
+                return perimeter
             if grid[i][j] == 1:
                 if grid[i - 1][j]:
                     connected_to += 1
