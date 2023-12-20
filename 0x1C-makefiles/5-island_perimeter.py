@@ -27,9 +27,9 @@ def island_perimeter(grid=[0]):
     Returns:
     The perimeter of the island
     """
-    perimeter=0
-    connected_to=0
-    block_perimeter=4
+    perimeter = 0
+    connected_to = 0
+    block_perimeter = 4
     rows = len(grid)
     cols = len(grid[0])
 
@@ -55,7 +55,7 @@ def island_perimeter(grid=[0]):
                 perimeter += block_perimeter
                 connected_to = 0
                 block_perimeter = 4
-        
+
             if grid[i][j] not in [0, 1]:
                 print("Must use the interger values of 0 and 1")
 
