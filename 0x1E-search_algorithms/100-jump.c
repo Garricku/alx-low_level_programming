@@ -13,9 +13,11 @@ int jump_search(int arr[], size_t size, int value)
 {
 	int step = sqrt(size), prev = 0, sizze = size;
 
+	if (arr == NULL || size == 0)
+		return -1;
+
 	while (arr[step - 1] < value)
 	{
-		printf("Value checked array[%d] = [%d]\n", step, prev);
 		prev = step;
 		step += sqrt(size);
 		if (prev >= sizze)
@@ -23,7 +25,7 @@ int jump_search(int arr[], size_t size, int value)
 	}
 	while (arr[prev] < value)
 	{
-		printf("Value checked array[%d] = [%d]\n", step, prev);
+		printf("Value checked array[%d] = [%d]\n", prev, arr[prev]);
 		prev++;
 		if (prev == fmin(step, size))
 			return (-1);
